@@ -1,0 +1,740 @@
+{
+  "schema_version": 1,
+  "repository": "emotion-aware-negotiation-2025",
+  "paper": {
+    "type": "conference-paper",
+    "title": "An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments",
+    "authors": [
+      {
+        "given-names": "Mehmet Onur",
+        "family-names": "Keskin"
+      },
+      {
+        "given-names": "Umut",
+        "family-names": "Çakan"
+      },
+      {
+        "given-names": "Reyhan",
+        "family-names": "Aydoğan"
+      }
+    ],
+    "year": 2025,
+    "url": "https://doi.org/10.1145/3717511.3747087",
+    "doi": "10.1145/3717511.3747087"
+  },
+  "selected_source": {
+    "entry": "Main.tex",
+    "scope": "Selected publication-aligned manuscript only. Working sources and reviewer correspondence are not distributed."
+  },
+  "framework": "framework.json",
+  "requirements": [
+    {
+      "id": "method-eq-hybrid",
+      "axis": "method",
+      "requirement": "eq-hybrid",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "eq-hybrid",
+          "line": 278,
+          "nearby_graphics": [
+            {
+              "reference": "figures/FIPA2.png",
+              "line": 264,
+              "path": "figures/FIPA2.png",
+              "sha256": "996d98c901a55189582945080832c32d8a1d91b3d43135016a3cf9a11776315a"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "Implemented maintained component; unreported constants, historical source choice or original assets prevent a claim of complete historical equivalence.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-eq-concession",
+      "axis": "method",
+      "requirement": "eq-concession",
+      "status": "full",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "eq-concession",
+          "line": 285,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "The published arithmetic is implemented and independently checked. This claim concerns the equation, not recovery of the human experiment.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-eq-delta",
+      "axis": "method",
+      "requirement": "eq-delta",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "eq-delta",
+          "line": 289,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "Implemented maintained component; unreported constants, historical source choice or original assets prevent a claim of complete historical equivalence.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-eq-mu",
+      "axis": "method",
+      "requirement": "eq-mu",
+      "status": "full",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "eq-mu",
+          "line": 291,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "The published arithmetic is implemented and independently checked. This claim concerns the equation, not recovery of the human experiment.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-eq-solver",
+      "axis": "method",
+      "requirement": "eq-solver",
+      "status": "full",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "eq-solver",
+          "line": 314,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "The published arithmetic is implemented and independently checked. This claim concerns the equation, not recovery of the human experiment.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-eq-emotion",
+      "axis": "method",
+      "requirement": "eq-emotion",
+      "status": "full",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "eq-emotion",
+          "line": 329,
+          "nearby_graphics": [
+            {
+              "reference": "figures/emotionWeights.png",
+              "line": 336,
+              "path": "figures/emotionWeights.png",
+              "sha256": "ce95039be1d659236c449224143ad39969da6003d4677fa22b52ccf33aa2602c"
+            },
+            {
+              "reference": "figures/emotionTimeSeries.jpg",
+              "line": 343,
+              "path": "figures/emotionTimeSeries.jpg",
+              "sha256": "901a237ced28650d85a6f01b4eb103bd49a09687b706354b805618a417491949"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents",
+        "negotiator.interaction.affect"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        },
+        {
+          "repository": "framework",
+          "path": "tests/test_observation_windows.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "The published arithmetic is implemented and independently checked. This claim concerns the equation, not recovery of the human experiment.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-emotionalWeigths",
+      "axis": "method",
+      "requirement": "emotionalWeigths",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "emotionalWeigths",
+          "line": 339,
+          "nearby_graphics": [
+            {
+              "reference": "figures/emotionWeights.png",
+              "line": 336,
+              "path": "figures/emotionWeights.png",
+              "sha256": "ce95039be1d659236c449224143ad39969da6003d4677fa22b52ccf33aa2602c"
+            },
+            {
+              "reference": "figures/emotionTimeSeries.jpg",
+              "line": 343,
+              "path": "figures/emotionTimeSeries.jpg",
+              "sha256": "901a237ced28650d85a6f01b4eb103bd49a09687b706354b805618a417491949"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "Implemented maintained component; unreported constants, historical source choice or original assets prevent a claim of complete historical equivalence.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-tbl-sensitivity",
+      "axis": "method",
+      "requirement": "tbl-sensitivity",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tbl-sensitivity",
+          "line": 388,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        },
+        {
+          "repository": "framework",
+          "path": "tests/test_solver_paper_order.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "Current-decision adaptation, Silent decrease and Nash comparison are checked. Threshold 9, step .2, Silent factor .5, Selfish factor 1.5 and class-change trigger are declared maintenance choices; exact original constants remain unverified.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "method-alg-solver",
+      "axis": "method",
+      "requirement": "alg-solver",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "alg-solver",
+          "line": 406,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "negotiator.strategies.policies",
+        "negotiator.strategies.agents"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_strategies.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        },
+        {
+          "repository": "framework",
+          "path": "tests/test_solver_paper_order.py"
+        }
+      ],
+      "result_target": "reproduction/method.json",
+      "explanation": "Current-decision adaptation, Silent decrease and Nash comparison are checked. Threshold 9, step .2, Silent factor .5, Selfish factor 1.5 and class-change trigger are declared maintenance choices; exact original constants remain unverified.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "published-profiles",
+      "axis": "protocol",
+      "requirement": "Published points and human-share perspective",
+      "status": "full",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tbl-preferences",
+          "line": 457,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "configs/",
+        "negotiator.domain.preferences"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_paper_profiles.py"
+        }
+      ],
+      "result_target": "reproduction/profile-1.json",
+      "explanation": "Every allocation is checked independently for both actors and each published session position. Targets and reward thresholds are separate from reservation constraints.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "protocol-schedule",
+      "axis": "protocol",
+      "requirement": "Practice, order, durations, breaks, instruments and condition identity",
+      "status": "partial",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tbl-preferences",
+          "line": 457,
+          "nearby_graphics": []
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "sec-evaluation",
+          "line": 444,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "configs/",
+        "protocol-schedule.json",
+        "negotiator.application.protocol",
+        "negotiator.application.studies"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_protocol_contract.py"
+        },
+        {
+          "repository": "framework",
+          "path": "tests/test_study_protocols.py"
+        }
+      ],
+      "result_target": "configs/synthetic.json",
+      "explanation": "Five-minute Hybrid practice, two counterbalanced ten-minute main sessions, ten-minute break and post-session nine-point questionnaires; fruit score tables follow session position. Missing original assets and instrument wording remain explicit preflight requirements.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "historical-outcomes",
+      "axis": "analysis",
+      "requirement": "Recompute the original participant results",
+      "status": "unverified",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "opModelResult",
+          "line": 367,
+          "nearby_graphics": []
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "fig-scores",
+          "line": 512,
+          "nearby_graphics": [
+            {
+              "reference": "figures/PriorityClustering.png",
+              "line": 497,
+              "path": "figures/PriorityClustering.png",
+              "sha256": "4c0c1bdc61eb55611e34157cd471eaaad95f0f7f4f72716f3b177c58549326c9"
+            },
+            {
+              "reference": "figures/Score.png",
+              "line": 509,
+              "path": "figures/Score.png",
+              "sha256": "a49536b67c474c61c94a5810e44972cc91f14a4ed2bbfec078b6ce3063a690f9"
+            }
+          ]
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tab:priorty_Score",
+          "line": 521,
+          "nearby_graphics": [
+            {
+              "reference": "figures/Score.png",
+              "line": 509,
+              "path": "figures/Score.png",
+              "sha256": "a49536b67c474c61c94a5810e44972cc91f14a4ed2bbfec078b6ce3063a690f9"
+            },
+            {
+              "reference": "figures/TimeAndRound.PNG",
+              "line": 538,
+              "path": "figures/TimeAndRound.PNG",
+              "sha256": "ab5139a282b3a63ac0807fd0b4eb0d689647e872a8a33f60b866d97f35849f80"
+            }
+          ]
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "fig-time",
+          "line": 541,
+          "nearby_graphics": [
+            {
+              "reference": "figures/TimeAndRound.PNG",
+              "line": 538,
+              "path": "figures/TimeAndRound.PNG",
+              "sha256": "ab5139a282b3a63ac0807fd0b4eb0d689647e872a8a33f60b866d97f35849f80"
+            }
+          ]
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tbl-questions",
+          "line": 550,
+          "nearby_graphics": [
+            {
+              "reference": "figures/TimeAndRound.PNG",
+              "line": 538,
+              "path": "figures/TimeAndRound.PNG",
+              "sha256": "ab5139a282b3a63ac0807fd0b4eb0d689647e872a8a33f60b866d97f35849f80"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "reproduction/published-results.json"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/published-results.json",
+      "explanation": "Original permitted inputs and historical analysis decisions are unavailable. The recipe returns an unavailable receipt and no numerical result.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "participant-analysis",
+      "axis": "analysis",
+      "requirement": "Participant unit, pairing, cohorts and missingness",
+      "status": "partial",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "opModelResult",
+          "line": 367,
+          "nearby_graphics": []
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "fig-scores",
+          "line": 512,
+          "nearby_graphics": [
+            {
+              "reference": "figures/PriorityClustering.png",
+              "line": 497,
+              "path": "figures/PriorityClustering.png",
+              "sha256": "4c0c1bdc61eb55611e34157cd471eaaad95f0f7f4f72716f3b177c58549326c9"
+            },
+            {
+              "reference": "figures/Score.png",
+              "line": 509,
+              "path": "figures/Score.png",
+              "sha256": "a49536b67c474c61c94a5810e44972cc91f14a4ed2bbfec078b6ce3063a690f9"
+            }
+          ]
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tab:priorty_Score",
+          "line": 521,
+          "nearby_graphics": [
+            {
+              "reference": "figures/Score.png",
+              "line": 509,
+              "path": "figures/Score.png",
+              "sha256": "a49536b67c474c61c94a5810e44972cc91f14a4ed2bbfec078b6ce3063a690f9"
+            },
+            {
+              "reference": "figures/TimeAndRound.PNG",
+              "line": 538,
+              "path": "figures/TimeAndRound.PNG",
+              "sha256": "ab5139a282b3a63ac0807fd0b4eb0d689647e872a8a33f60b866d97f35849f80"
+            }
+          ]
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "fig-time",
+          "line": 541,
+          "nearby_graphics": [
+            {
+              "reference": "figures/TimeAndRound.PNG",
+              "line": 538,
+              "path": "figures/TimeAndRound.PNG",
+              "sha256": "ab5139a282b3a63ac0807fd0b4eb0d689647e872a8a33f60b866d97f35849f80"
+            }
+          ]
+        },
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tbl-questions",
+          "line": 550,
+          "nearby_graphics": [
+            {
+              "reference": "figures/TimeAndRound.PNG",
+              "line": 538,
+              "path": "figures/TimeAndRound.PNG",
+              "sha256": "ab5139a282b3a63ac0807fd0b4eb0d689647e872a8a33f60b866d97f35849f80"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "negotiator.reproduction.operations.paired_summary",
+        "reproduction/paired-example.json"
+      ],
+      "tests": [
+        {
+          "repository": "framework",
+          "path": "tests/test_reproduction.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_reproduction_targets.py"
+        }
+      ],
+      "result_target": "reproduction/paired-example.json",
+      "explanation": "Tested generic paired analysis with explicit cohort/domain grouping and exclusions; synthetic input and modern percentile intervals do not reproduce the paper significance tests.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "independent-use",
+      "axis": "runnability",
+      "requirement": "Independent install, configuration, run and report",
+      "status": "full",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tbl-preferences",
+          "line": 457,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "run.py",
+        "requirements.txt",
+        "framework.json"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_companion.py"
+        }
+      ],
+      "result_target": "configs/synthetic.json",
+      "explanation": "The supported hardware-free example runs in a clean environment using only the pinned engine. Robot operation requires separate lab validation.",
+      "documentation": "METHOD.md"
+    },
+    {
+      "id": "reader-paths",
+      "axis": "documentation",
+      "requirement": "First use, paper inspection, contribution and citation",
+      "status": "full",
+      "critical": false,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "eq-hybrid",
+          "line": 278,
+          "nearby_graphics": [
+            {
+              "reference": "figures/FIPA2.png",
+              "line": 264,
+              "path": "figures/FIPA2.png",
+              "sha256": "996d98c901a55189582945080832c32d8a1d91b3d43135016a3cf9a11776315a"
+            }
+          ]
+        }
+      ],
+      "implementation": [
+        "README.md",
+        "METHOD.md",
+        "REPRODUCIBILITY.md",
+        "docs/"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_release_contract.py"
+        }
+      ],
+      "result_target": "reproduction/targets.json",
+      "explanation": "Executable example commands, method map, protocol limits and preferred paper citation are provided.",
+      "documentation": "METHOD.md"
+    }
+  ],
+  "interpretation": {
+    "full": "Evidence supports this scoped requirement, not the entire paper.",
+    "partial": "Some elements are implemented but unresolved method/protocol choices remain.",
+    "unverified": "Required original evidence is unavailable."
+  }
+}

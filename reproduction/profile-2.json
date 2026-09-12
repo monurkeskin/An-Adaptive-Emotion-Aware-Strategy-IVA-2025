@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "paper_id": "emotion-aware-negotiation-2025",
+  "result_id": "profile-space-session-2",
+  "claim_scope": "published-method",
+  "analysis": "profile-space",
+  "parameters": {},
+  "environment": {
+    "framework": "2.0.0"
+  },
+  "inputs": [
+    {
+      "id": "published-points",
+      "path": "profile-2-inputs.json",
+      "sha256": "1301770c3ab541a5c158192bdad8f18f70c4db451149f9fcaead260bd22f329c"
+    }
+  ],
+  "expected": [
+    {
+      "key": "outcome_count",
+      "value": 625,
+      "source": "Exhaustive allocation of the published point table; all resources sum to 100 points."
+    },
+    {
+      "key": "human_min",
+      "value": 0,
+      "source": "Exhaustive allocation of the published point table; all resources sum to 100 points."
+    },
+    {
+      "key": "agent_min",
+      "value": 0,
+      "source": "Exhaustive allocation of the published point table; all resources sum to 100 points."
+    },
+    {
+      "key": "human_max",
+      "value": 1,
+      "source": "Exhaustive allocation of the published point table; all resources sum to 100 points."
+    },
+    {
+      "key": "agent_max",
+      "value": 1,
+      "source": "Exhaustive allocation of the published point table; all resources sum to 100 points."
+    }
+  ],
+  "description": "Recalculates additive utility over the complete paper domain. Profiles and independent tests use the published point tables."
+}

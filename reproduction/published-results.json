@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "paper_id": "emotion-aware-negotiation-2025",
+  "result_id": "original-human-study-results",
+  "claim_scope": "published-result",
+  "analysis": "paired-summary",
+  "environment": {
+    "framework": "2.0.0"
+  },
+  "parameters": {
+    "conditions": [
+      "Hybrid",
+      "Solver"
+    ],
+    "minimum_rounds": 0,
+    "seed": 42,
+    "bootstrap_samples": 2000
+  },
+  "inputs": [
+    {
+      "id": "original-analysis-inputs",
+      "missing_reason": "Permitted original records, exact inclusion mapping and historical analysis provenance have not been recovered for this release."
+    }
+  ],
+  "expected": [],
+  "description": "Unavailable target for opModelResult, fig-scores, tab:priorty_Score, fig-time, tbl-questions. This is an evidence-status receipt, not a reproduction. A prespecified historical analysis recipe must be supplied with recovered inputs."
+}

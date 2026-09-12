@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "paper_id": "emotion-aware-negotiation-2025",
+  "result_id": "method-equations",
+  "claim_scope": "published-method",
+  "analysis": "method-vectors",
+  "environment": {
+    "framework": "2.0.0"
+  },
+  "parameters": {},
+  "inputs": [
+    {
+      "id": "method-cases",
+      "path": "method-inputs.json",
+      "sha256": "5d07d234cc0f30bc4685c07e55957a4c06078cf458aca3259a714e9a4207634b"
+    }
+  ],
+  "expected": [
+    {
+      "key": "time-start",
+      "value": 0.9,
+      "source": "Quadratic equation evaluated independently at t=0, 1/2, 1",
+      "atol": 1e-12,
+      "rtol": 0
+    },
+    {
+      "key": "time-midpoint",
+      "value": 0.675,
+      "source": "Quadratic equation evaluated independently at t=0, 1/2, 1",
+      "atol": 1e-12,
+      "rtol": 0
+    },
+    {
+      "key": "time-deadline",
+      "value": 0.4,
+      "source": "Quadratic equation evaluated independently at t=0, 1/2, 1",
+      "atol": 1e-12,
+      "rtol": 0
+    },
+    {
+      "key": "solver-step",
+      "value": 0.785,
+      "source": "eq-solver: .8 + .25*.165 - .75*.75*.1"
+    },
+    {
+      "key": "mixed-emotion",
+      "value": -0.0825,
+      "source": "eq-emotion and emotionalWeigths; .5*.165 + .5*(-.33)"
+    },
+    {
+      "key": "ignored-probability",
+      "value": 0.0825,
+      "source": "Excluded Fear contributes zero without renormalizing retained probability mass"
+    }
+  ],
+  "description": "Independent equation checks. Test vectors do not estimate a human effect or recover unreported historical constants."
+}

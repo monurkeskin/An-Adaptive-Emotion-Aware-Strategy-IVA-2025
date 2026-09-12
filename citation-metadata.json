@@ -1,0 +1,42 @@
+{
+  "id": "emotion-aware-negotiation-2025",
+  "bibtex_key": "emotionawarenegotiation2025",
+  "paper": {
+    "type": "conference-paper",
+    "title": "An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments",
+    "authors": [
+      {
+        "given-names": "Mehmet Onur",
+        "family-names": "Keskin"
+      },
+      {
+        "given-names": "Umut",
+        "family-names": "Çakan"
+      },
+      {
+        "given-names": "Reyhan",
+        "family-names": "Aydoğan"
+      }
+    ],
+    "year": 2025,
+    "url": "https://doi.org/10.1145/3717511.3747087",
+    "doi": "10.1145/3717511.3747087"
+  },
+  "software": {
+    "cff-version": "1.2.0",
+    "message": "Please cite the associated paper, and NEGOTIATOR for the framework. Record the software version used.",
+    "type": "software",
+    "title": "An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments — maintained code companion",
+    "authors": [
+      {
+        "given-names": "Mehmet Onur",
+        "family-names": "Keskin"
+      }
+    ],
+    "version": "2.0.0",
+    "date-released": "2026-09-12",
+    "license": "GPL-3.0-only",
+    "repository-code": "https://github.com/monurkeskin/emotion-aware-negotiation-2025",
+    "doi": "10.5281/zenodo.22729000"
+  }
+}

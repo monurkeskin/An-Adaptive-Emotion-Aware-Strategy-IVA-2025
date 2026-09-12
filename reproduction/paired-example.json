@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "paper_id": "emotion-aware-negotiation-2025",
+  "result_id": "synthetic-paired-analysis",
+  "claim_scope": "synthetic-validation",
+  "analysis": "paired-summary",
+  "environment": {
+    "framework": "2.0.0"
+  },
+  "parameters": {
+    "conditions": [
+      "Hybrid",
+      "Solver"
+    ],
+    "minimum_rounds": 0,
+    "seed": 42,
+    "bootstrap_samples": 2000
+  },
+  "inputs": [
+    {
+      "id": "synthetic-participants",
+      "path": "paired-inputs.json",
+      "sha256": "0cd2a5172c36cba79e79b0aa43e0116ecaf0e54329464dba642e7371c2495051"
+    }
+  ],
+  "expected": [
+    {
+      "key": "complete_pairs",
+      "value": 3,
+      "source": "Three explicitly constructed paired fixture participants"
+    }
+  ],
+  "description": "Analysis-contract demonstration. Percentile participant bootstrap is a maintained analysis example, not a claim to recover the paper significance test."
+}

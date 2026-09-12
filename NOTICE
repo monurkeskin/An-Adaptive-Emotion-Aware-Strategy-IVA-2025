@@ -1,0 +1,5 @@
+Maintained paper companion, copyright (c) 2026 Mehmet Onur Keskin and contributors.
+GPL-3.0-only. The paper authors are credited in CITATION.cff. Framework code is
+not copied here; it remains in the separately pinned NEGOTIATOR distribution.
+Selected numeric protocol settings are attributed in METHOD.md. No human data,
+model weights or third-party questionnaire wording are distributed.

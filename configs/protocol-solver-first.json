@@ -1,0 +1,995 @@
+{
+  "study_id": "emotion-aware-negotiation-2025",
+  "participant_id": "P001",
+  "title": "An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments",
+  "domain": "fruits",
+  "preference_mode": "assigned",
+  "cohort": "default",
+  "first_actor": "human",
+  "output": "text",
+  "seed": 42,
+  "synthetic": false,
+  "instructions": "Study the displayed preferences and negotiate a complete offer before the deadline. Allocation quantities are what you keep.",
+  "surveys": [],
+  "conditions": [
+    {
+      "label": "Practice (synthetic three-issue task)",
+      "strategy": "hybrid",
+      "duration_seconds": 300,
+      "practice": true,
+      "domain": {
+        "schema_version": 1,
+        "name": "Synthetic practice",
+        "issues": [
+          {
+            "name": "map",
+            "total": 1
+          },
+          {
+            "name": "water",
+            "total": 1
+          },
+          {
+            "name": "food",
+            "total": 1
+          }
+        ]
+      },
+      "output": "text",
+      "human_profile": {
+        "weights": {
+          "map": 0.5,
+          "water": 0.3333333333333333,
+          "food": 0.16666666666666666
+        },
+        "scores": {
+          "map": [
+            {
+              "value": 0,
+              "score": 0.5
+            },
+            {
+              "value": 1,
+              "score": 1.0
+            }
+          ],
+          "water": [
+            {
+              "value": 0,
+              "score": 0.5
+            },
+            {
+              "value": 1,
+              "score": 1.0
+            }
+          ],
+          "food": [
+            {
+              "value": 0,
+              "score": 0.5
+            },
+            {
+              "value": 1,
+              "score": 1.0
+            }
+          ]
+        },
+        "provenance": "assigned",
+        "reservation": 0.0,
+        "conversion": "synthetic-rank-linear-paired-v1"
+      },
+      "agent_profile": {
+        "weights": {
+          "map": 0.3333333333333333,
+          "water": 0.5,
+          "food": 0.16666666666666666
+        },
+        "scores": {
+          "map": [
+            {
+              "value": 0,
+              "score": 1.0
+            },
+            {
+              "value": 1,
+              "score": 0.5
+            }
+          ],
+          "water": [
+            {
+              "value": 0,
+              "score": 1.0
+            },
+            {
+              "value": 1,
+              "score": 0.5
+            }
+          ],
+          "food": [
+            {
+              "value": 0,
+              "score": 1.0
+            },
+            {
+              "value": 1,
+              "score": 0.5
+            }
+          ]
+        },
+        "provenance": "assigned",
+        "reservation": 0.0,
+        "conversion": "rank-linear-paired-v1"
+      }
+    },
+    {
+      "label": "Solver",
+      "strategy": "solver-2025",
+      "duration_seconds": 600,
+      "domain": "fruits",
+      "human_profile": {
+        "weights": {
+          "watermelon": 0.48,
+          "banana": 0.32,
+          "orange": 0.16,
+          "apple": 0.04
+        },
+        "scores": {
+          "watermelon": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "banana": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "orange": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "apple": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ]
+        },
+        "reservation": 0,
+        "provenance": "assigned",
+        "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+      },
+      "agent_profile": {
+        "weights": {
+          "watermelon": 0.16,
+          "banana": 0.04,
+          "orange": 0.48,
+          "apple": 0.32
+        },
+        "scores": {
+          "watermelon": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "banana": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "orange": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "apple": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ]
+        },
+        "reservation": 0,
+        "provenance": "assigned",
+        "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+      },
+      "output": "nao",
+      "break_after_seconds": 600,
+      "strategy_parameters": {
+        "adaptation_min_human_offers": 9,
+        "concession_step": 0.2,
+        "silent_multiplier": 0.5,
+        "selfish_multiplier": 1.5
+      },
+      "practice": false,
+      "score_targets": {
+        "human": 0.4
+      },
+      "reward_minimums": {
+        "human": 0.4
+      }
+    },
+    {
+      "label": "Hybrid",
+      "strategy": "hybrid",
+      "duration_seconds": 600,
+      "domain": "fruits",
+      "human_profile": {
+        "weights": {
+          "watermelon": 0.16,
+          "banana": 0.04,
+          "orange": 0.48,
+          "apple": 0.32
+        },
+        "scores": {
+          "watermelon": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "banana": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "orange": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "apple": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ]
+        },
+        "reservation": 0,
+        "provenance": "assigned",
+        "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+      },
+      "agent_profile": {
+        "weights": {
+          "watermelon": 0.48,
+          "banana": 0.32,
+          "orange": 0.16,
+          "apple": 0.04
+        },
+        "scores": {
+          "watermelon": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "banana": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "orange": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "apple": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ]
+        },
+        "reservation": 0,
+        "provenance": "assigned",
+        "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+      },
+      "output": "nao",
+      "practice": false,
+      "score_targets": {
+        "human": 0.4
+      },
+      "reward_minimums": {
+        "human": 0.4
+      }
+    }
+  ],
+  "purpose": "published-protocol",
+  "citation_ids": [
+    "emotion-aware-negotiation-2025"
+  ],
+  "order": "as_entered",
+  "position_profiles": [
+    {
+      "human_profile": {
+        "weights": {
+          "watermelon": 0.48,
+          "banana": 0.32,
+          "orange": 0.16,
+          "apple": 0.04
+        },
+        "scores": {
+          "watermelon": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "banana": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "orange": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "apple": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ]
+        },
+        "reservation": 0,
+        "provenance": "assigned",
+        "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+      },
+      "agent_profile": {
+        "weights": {
+          "watermelon": 0.16,
+          "banana": 0.04,
+          "orange": 0.48,
+          "apple": 0.32
+        },
+        "scores": {
+          "watermelon": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "banana": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "orange": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "apple": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ]
+        },
+        "reservation": 0,
+        "provenance": "assigned",
+        "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+      }
+    },
+    {
+      "human_profile": {
+        "weights": {
+          "watermelon": 0.16,
+          "banana": 0.04,
+          "orange": 0.48,
+          "apple": 0.32
+        },
+        "scores": {
+          "watermelon": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "banana": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "orange": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "apple": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ]
+        },
+        "reservation": 0,
+        "provenance": "assigned",
+        "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+      },
+      "agent_profile": {
+        "weights": {
+          "watermelon": 0.48,
+          "banana": 0.32,
+          "orange": 0.16,
+          "apple": 0.04
+        },
+        "scores": {
+          "watermelon": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "banana": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "orange": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ],
+          "apple": [
+            {
+              "value": 0,
+              "score": 0.0
+            },
+            {
+              "value": 1,
+              "score": 0.25
+            },
+            {
+              "value": 2,
+              "score": 0.5
+            },
+            {
+              "value": 3,
+              "score": 0.75
+            },
+            {
+              "value": 4,
+              "score": 1.0
+            }
+          ]
+        },
+        "reservation": 0,
+        "provenance": "assigned",
+        "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+      }
+    }
+  ],
+  "protocol": {
+    "id": "emotion-aware-negotiation-2025",
+    "revision": "2",
+    "paper": "https://doi.org/10.1145/3717511.3747087",
+    "requirements": [
+      {
+        "id": "evidence-1",
+        "description": "Historical numeric adaptation threshold, step sizes, zero-denominator and class-change conventions"
+      },
+      {
+        "id": "evidence-2",
+        "description": "Original practice profiles, questionnaires, camera model and frame timestamps"
+      }
+    ],
+    "configuration_sha256": "7363ec07f49bd751009f1fdcdac1e3a76258744fd02de5ee99a26f9e1f6631a7"
+  }
+}

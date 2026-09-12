@@ -1,0 +1,2 @@
+-c constraints.txt
+negotiator-human @ git+https://github.com/monurkeskin/NEGOTIATOR.git@bf0f0e467293e2ff13adeaff5070a7675f2279a9

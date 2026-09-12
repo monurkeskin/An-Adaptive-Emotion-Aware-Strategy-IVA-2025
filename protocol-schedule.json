@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "paper_id": "emotion-aware-negotiation-2025",
+  "protocol_summary": "Five-minute Hybrid practice, two counterbalanced ten-minute main sessions, ten-minute break and post-session nine-point questionnaires; fruit score tables follow session position.",
+  "historical_instruments_included": false,
+  "unknowns": [
+    "Historical numeric adaptation threshold, step sizes, zero-denominator and class-change conventions",
+    "Original practice profiles, questionnaires, camera model and frame timestamps",
+    "Permitted human outcomes, original model-comparison inputs and centroid-training records"
+  ],
+  "required_before_human_use": "Resolve each missing evidence item and validate the local study protocol before starting.",
+  "analysis_unit": "participant",
+  "minimum_rounds_in_either_session": 0,
+  "round_definition": "Must be supplied from the historical record; do not equate rounds with individual offers.",
+  "questionnaires": "post_session",
+  "empirical_reproduction": "unavailable: original permitted inputs and analysis provenance are not included"
+}

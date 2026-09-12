@@ -1,0 +1,226 @@
+{
+  "domain": {
+    "schema_version": 1,
+    "name": "Fruits_A",
+    "issues": [
+      {
+        "name": "watermelon",
+        "total": 4
+      },
+      {
+        "name": "banana",
+        "total": 4
+      },
+      {
+        "name": "orange",
+        "total": 4
+      },
+      {
+        "name": "apple",
+        "total": 4
+      }
+    ]
+  },
+  "human_profile": {
+    "weights": {
+      "watermelon": 0.48,
+      "banana": 0.32,
+      "orange": 0.16,
+      "apple": 0.04
+    },
+    "scores": {
+      "watermelon": [
+        {
+          "value": 0,
+          "score": 0.0
+        },
+        {
+          "value": 1,
+          "score": 0.25
+        },
+        {
+          "value": 2,
+          "score": 0.5
+        },
+        {
+          "value": 3,
+          "score": 0.75
+        },
+        {
+          "value": 4,
+          "score": 1.0
+        }
+      ],
+      "banana": [
+        {
+          "value": 0,
+          "score": 0.0
+        },
+        {
+          "value": 1,
+          "score": 0.25
+        },
+        {
+          "value": 2,
+          "score": 0.5
+        },
+        {
+          "value": 3,
+          "score": 0.75
+        },
+        {
+          "value": 4,
+          "score": 1.0
+        }
+      ],
+      "orange": [
+        {
+          "value": 0,
+          "score": 0.0
+        },
+        {
+          "value": 1,
+          "score": 0.25
+        },
+        {
+          "value": 2,
+          "score": 0.5
+        },
+        {
+          "value": 3,
+          "score": 0.75
+        },
+        {
+          "value": 4,
+          "score": 1.0
+        }
+      ],
+      "apple": [
+        {
+          "value": 0,
+          "score": 0.0
+        },
+        {
+          "value": 1,
+          "score": 0.25
+        },
+        {
+          "value": 2,
+          "score": 0.5
+        },
+        {
+          "value": 3,
+          "score": 0.75
+        },
+        {
+          "value": 4,
+          "score": 1.0
+        }
+      ]
+    },
+    "reservation": 0,
+    "provenance": "assigned",
+    "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+  },
+  "agent_profile": {
+    "weights": {
+      "watermelon": 0.16,
+      "banana": 0.04,
+      "orange": 0.48,
+      "apple": 0.32
+    },
+    "scores": {
+      "watermelon": [
+        {
+          "value": 0,
+          "score": 0.0
+        },
+        {
+          "value": 1,
+          "score": 0.25
+        },
+        {
+          "value": 2,
+          "score": 0.5
+        },
+        {
+          "value": 3,
+          "score": 0.75
+        },
+        {
+          "value": 4,
+          "score": 1.0
+        }
+      ],
+      "banana": [
+        {
+          "value": 0,
+          "score": 0.0
+        },
+        {
+          "value": 1,
+          "score": 0.25
+        },
+        {
+          "value": 2,
+          "score": 0.5
+        },
+        {
+          "value": 3,
+          "score": 0.75
+        },
+        {
+          "value": 4,
+          "score": 1.0
+        }
+      ],
+      "orange": [
+        {
+          "value": 0,
+          "score": 0.0
+        },
+        {
+          "value": 1,
+          "score": 0.25
+        },
+        {
+          "value": 2,
+          "score": 0.5
+        },
+        {
+          "value": 3,
+          "score": 0.75
+        },
+        {
+          "value": 4,
+          "score": 1.0
+        }
+      ],
+      "apple": [
+        {
+          "value": 0,
+          "score": 0.0
+        },
+        {
+          "value": 1,
+          "score": 0.25
+        },
+        {
+          "value": 2,
+          "score": 0.5
+        },
+        {
+          "value": 3,
+          "score": 0.75
+        },
+        {
+          "value": 4,
+          "score": 1.0
+        }
+      ]
+    },
+    "reservation": 0,
+    "provenance": "assigned",
+    "conversion": "2025-adaptive-emotion-aware-strategy-tbl-preferences-points-v1"
+  }
+}

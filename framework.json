@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/monurkeskin/NEGOTIATOR",
+  "version": "2.0.0",
+  "revision": "bf0f0e467293e2ff13adeaff5070a7675f2279a9",
+  "paper": "https://doi.org/10.1145/3717511.3747087",
+  "implementation": "maintained",
+  "historical_experiment_reproduction": false,
+  "release_status": "released",
+  "package_content_sha256": "4ce0f1bdbafcd1330e815f81be5a3c85a79638646ba318d06c98d35adade4c0e",
+  "software_doi": "10.5281/zenodo.22728983"
+}
