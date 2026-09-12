@@ -6,25 +6,63 @@ Mehmet Onur Keskin · Umut Çakan · Reyhan Aydoğan
 
 [![Tests](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/actions/workflows/tests.yml)
 
-This paper develops Solver into an adaptive emotion-aware negotiation strategy and evaluates it against a Hybrid baseline in human–robot interactions. Emotional feedback, reciprocal bidding, opponent awareness and time pressure all contribute to the next offer.
+An offer can look acceptable on paper while leaving its recipient visibly
+frustrated. **Can a negotiating agent use that feedback to choose its next offer?**
+This work develops Solver's emotion-aware strategy and compares it with a Hybrid
+baseline in a study where 28 people negotiate with a NAO robot.
 
-## Method
+## How facial feedback enters the decision
 
-The published method averages categorical facial-expression probabilities over the response interval, estimates how the human responds to changes in agent behavior, and adapts concession parameters using dominant move categories. After adaptation, it compares the proposed offer with an estimated Nash-product offer.
+![Paper Figure 2: categorical expression weights from sadness at −0.33 through neutral at zero to surprise at +0.33.](docs/paper/emotion-weights.svg)
 
-```mermaid
-flowchart LR
-  A[Expression probabilities across response interval] --> B[Emotion coefficient]
-  C[Offer history and opponent model] --> D[Awareness and dominant moves]
-  B --> E[Adaptive hybrid target]
-  D --> E
-  F[Time pressure] --> E
-  E --> G[Offer and estimated Nash comparison]
-```
+*Figure 2. The method uses a weighted vector of expression probabilities instead
+of selecting just the most likely category.*
 
-## Study and findings
+![Paper Figure 3: expression observations collected across the interval between the human's offer and Solver's completed response.](docs/paper/response-interval.jpg)
 
-In the reported 28-participant study, Solver achieved higher agent utility and required fewer bids than the Hybrid baseline. Participants also rated Solver more highly on caring about their preferences. The paper contains the study statistics and their scope; the runnable examples here are synthetic method checks. [Read the paper](https://doi.org/10.1145/3717511.3747087).
+*Figure 3. Frame probabilities are averaged over the response interval. Their
+weighted sum gives the emotion coefficient in Equation 7.*
+
+The opponent-awareness coefficient determines how strongly that emotion signal
+affects the behavior target. Recent offers supply the reciprocal component; time
+pressure supplies the concession component. Solver then adapts concession
+parameters to dominant move categories and compares its candidate with an
+estimated Nash-product offer. [Algorithm 1 and method walkthrough](METHOD.md).
+
+| Part of the method | Paper reference | Explore in this package |
+| --- | --- | --- |
+| Emotion and awareness in the utility target | Equations 6–8; Figures 2–3 | [Calculation example](reproduction/method.json) |
+| Adaptation to the human's moves | Table 2; Algorithm 1 | [Method choices and update order](METHOD.md) |
+| Fruit-sharing preferences | Table 3 | [First](reproduction/profile-1.json) and [second](reproduction/profile-2.json) profile checks |
+| Solver / Hybrid session order | Section 4.1 | [Study configurations](CONFIGURATIONS.md) |
+
+## What changed in the human–robot study?
+
+![Paper Figure 7: distributions of agent utility, user utility and normalized utility product for Solver and Hybrid.](docs/paper/solver-hybrid-outcomes.svg)
+
+*Figure 7 shows the published distributions. Each of the 28 participants
+negotiated in both conditions. The means and p-values below are reported in
+Section 4.2 and Table 5.*
+
+| Measure | Solver | Hybrid | Reported p-value |
+| --- | ---: | ---: | ---: |
+| Agent utility | 0.73 | 0.68 | 0.042 |
+| Human utility | 0.77 | 0.79 | 0.302 |
+| Normalized utility product | 0.87 | 0.82 | 0.096 |
+| Total offers per session | 14.96 | 19.39 | 0.048 |
+| Normalized agreement time | 0.41 | 0.51 | 0.093 |
+| “Nao cared about my preferences” (1–9) | 7.71 | 6.82 | 0.047 |
+
+Solver achieved higher agent utility, used fewer offers and received a higher
+rating on caring about the participant's preferences in the reported comparisons.
+Human utility, joint product and agreement time did not differ significantly
+at 0.05. Participant-priority clusters were exploratory given the small sample.
+[Read the study](https://doi.org/10.1145/3717511.3747087) ·
+[Figure and result sources](docs/paper/README.md).
+
+The code examples below expose the calculations with synthetic inputs. They do
+not generate these published human-study results; access to original participant
+records remains separate from using the method.
 
 ## What you can explore
 

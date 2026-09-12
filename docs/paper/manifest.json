@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "paper_url": "https://doi.org/10.1145/3717511.3747087",
+  "pdf_sha256": "cb754926a6eeff55215aa7430fa0cf7cfa56085cddcb64b03ad0cd3e530447aa",
+  "pdf_reference": "Publisher PDF",
+  "verification": "Compared with the cited paper PDF; page numbers count from its first page.",
+  "figures": [
+    {
+      "file": "emotion-weights.png",
+      "figure": "Figure 2; emotionalWeigths",
+      "pdf_page": 4,
+      "source_file": "figures/emotionWeights.png",
+      "source_sha256": "ce95039be1d659236c449224143ad39969da6003d4677fa22b52ccf33aa2602c",
+      "sha256": "ce95039be1d659236c449224143ad39969da6003d4677fa22b52ccf33aa2602c",
+      "conversion": "Unmodified source image.",
+      "display_file": "emotion-weights.svg",
+      "display_sha256": "8e3ad7a48c21256e8ce860cc31269ce1db644878ef05c4700e5feec84f906dfe",
+      "display_note": "SVG places the unmodified image over white, matching the paper and keeping black text visible in dark themes."
+    },
+    {
+      "file": "response-interval.jpg",
+      "figure": "Figure 3; emotionalTimeSeries",
+      "pdf_page": 4,
+      "source_file": "figures/emotionTimeSeries.jpg",
+      "source_sha256": "901a237ced28650d85a6f01b4eb103bd49a09687b706354b805618a417491949",
+      "sha256": "901a237ced28650d85a6f01b4eb103bd49a09687b706354b805618a417491949",
+      "conversion": "Unmodified source image."
+    },
+    {
+      "file": "solver-hybrid-outcomes.png",
+      "figure": "Figure 7; fig-scores",
+      "pdf_page": 7,
+      "source_file": "figures/Score.png",
+      "source_sha256": "a49536b67c474c61c94a5810e44972cc91f14a4ed2bbfec078b6ce3063a690f9",
+      "sha256": "a49536b67c474c61c94a5810e44972cc91f14a4ed2bbfec078b6ce3063a690f9",
+      "conversion": "Unmodified source image.",
+      "display_file": "solver-hybrid-outcomes.svg",
+      "display_sha256": "1af77072a96b7030d5d2e75b960a22d3ba52acf978ad4006b407a09b1d0e231f",
+      "display_note": "SVG places the unmodified image over white, matching the paper and keeping black text visible in dark themes."
+    }
+  ]
+}
