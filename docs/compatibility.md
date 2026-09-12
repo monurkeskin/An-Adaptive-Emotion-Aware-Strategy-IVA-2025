@@ -16,7 +16,7 @@ requirements runs independently; no other checkout needs to be adjacent.
 The browser avatar is an illustrative interface. It is not a validated replacement
 for a paper's embodiment condition. A newer robot or avatar must pass the engine's
 capability/version/failure contracts and a separate recorded hardware test.
-See the engine's [device guide](https://github.com/monurkeskin/NEGOTIATOR/blob/v2.0.0/docs/devices.md)
+See the engine's [device guide](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024/blob/v2.0.0/docs/devices.md)
 for exact bridge configuration and the supported legacy namespace.
 
 If installation reports `git` missing, install Git before retrying. If an output

@@ -11,7 +11,7 @@ and **replicating a human finding**. The associated paper is [An Adaptive Emotio
 | `profile-1.json` | Recompute and check against independent references |
 | `profile-2.json` | Recompute and check against independent references |
 | `paired-example.json` | Recompute and check against independent references |
-| `published-results.json` | Unavailable original inputs; no numbers fabricated |
+| `published-results.json` | Restricted original inputs; method/demo recipes are available separately |
 
 ```bash
 python verify.py --output verification-output
@@ -63,3 +63,12 @@ paper p-value or a substitute for a prespecified historical analysis.
 Read [analysis](docs/analysis.md) before replacing synthetic inputs. The original
 result target remains unavailable until the appropriate original analysis recipe,
 permitted records and inclusion ledger are supplied together.
+
+## Restricted participant data
+
+Participant-level data need not be released publicly to use or extend this software.
+Access conditions, method/configuration fidelity and availability of analysis code
+are separate questions. Authorized researchers can work with permitted local inputs;
+synthetic fixtures support software and method checks without exposing participants.
+A missing historical-analysis implementation is documented as a code limitation,
+separately from whether its original inputs can be distributed.

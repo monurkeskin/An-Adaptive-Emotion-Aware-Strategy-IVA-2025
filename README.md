@@ -1,83 +1,108 @@
-# An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments
+# An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments — [IVA 2025]
 
+Mehmet Onur Keskin · Umut Çakan · Reyhan Aydoğan
+
+[Paper](https://doi.org/10.1145/3717511.3747087) · [Explore the method](METHOD.md) · [Try the code](#try-it-yourself) · [Study guide](docs/protocol.md) · [Citation](#cite-the-paper)
+
+[![Tests](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/actions/workflows/tests.yml)
 [![Software archive](https://zenodo.org/badge/DOI/10.5281/zenodo.22729000.svg)](https://doi.org/10.5281/zenodo.22729000)
 
-**Independent research companion · maintained release 2.0.0**
+**Can a negotiating agent use emotional feedback to adapt its offers while remaining responsive to how the person actually bargains?**
 
-[![Tests](https://github.com/monurkeskin/emotion-aware-negotiation-2025/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/emotion-aware-negotiation-2025/actions/workflows/tests.yml)
-[Paper](https://doi.org/10.1145/3717511.3747087) · [Method](METHOD.md) · [Reproduce](REPRODUCIBILITY.md) · [Protocol](docs/protocol.md) · [Contribute](docs/development.md)
+This paper develops Solver into an adaptive emotion-aware negotiation strategy and evaluates it against a Hybrid baseline in human–robot interactions. Emotional feedback, reciprocal bidding, opponent awareness and time pressure all contribute to the next offer.
 
-Mean categorical affect in the response interval, opponent awareness, fixed move centroids, current-decision adaptation and comparison with the estimated Nash-product offer.
+## The idea
 
-This package contains this paper's configurations, method requirements, independent
-checks and analysis recipes. It uses a pinned [NEGOTIATOR](https://github.com/monurkeskin/NEGOTIATOR)
-engine; no second engine checkout or robot is needed for the first example.
+The published method averages categorical facial-expression probabilities over the response interval, estimates how the human responds to changes in agent behavior, and adapts concession parameters using dominant move categories. After adaptation, it compares the proposed offer with an estimated Nash-product offer.
 
-| Start here | What you will get |
-| --- | --- |
-| First-time user | A short generated negotiation, session records and a readable report |
-| Researcher reading the paper | [Paper map](paper-map.json), exact point tables where recovered, equation checks and result availability |
-| Contributor | [Module boundaries and test-first example](docs/development.md), extensible configs and reusable engine contracts |
+```mermaid
+flowchart LR
+  A[Expression probabilities across response interval] --> B[Emotion coefficient]
+  C[Offer history and opponent model] --> D[Awareness and dominant moves]
+  B --> E[Adaptive hybrid target]
+  D --> E
+  F[Time pressure] --> E
+  E --> G[Offer and estimated Nash comparison]
+```
 
-## Run your first example
+## In the paper
 
-Use Python 3.11 or 3.12. Clone this repository, then run:
+In the reported 28-participant study, Solver achieved higher agent utility and required fewer bids than the Hybrid baseline. Participants also rated Solver more highly on caring about their preferences. The paper contains the study statistics and their scope; the runnable examples here are synthetic method checks. [Read the paper](https://doi.org/10.1145/3717511.3747087).
+
+## Explore this work
+
+Follow the equation through a small input example, inspect the exact fruit point tables and compare Solver-first with Hybrid-first protocol configurations. The paper's categorical formulation is the method implemented by this maintained package.
+
+| Explore | Start with | What it shows |
+| --- | --- | --- |
+| Adaptive method | `reproduction/method.json` | Inspect affect, awareness and target-utility calculations. |
+| Exact point profiles | `reproduction/profile-1.json` | Recompute the published fruit-sharing utility space. |
+| Study order | `CONFIGURATIONS.md` | Compare Solver-first and Hybrid-first session schedules. |
+
+This repository holds the paper-specific configurations, method checks and study
+guides. The shared [NEGOTIATOR framework](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024) runs the negotiation,
+participant/conductor views and session analysis. Its exact **2.0.0** revision is
+pinned in [framework.json](framework.json); installation brings it in automatically.
+
+The repository linked by the paper also contains a dimensional valence/arousal variant. This package makes the categorical choice explicit, including current-decision adaptation, Silent response adjustment and estimated Nash comparison. Some numerical settings remain maintained choices; see [METHOD.md](METHOD.md) before interpreting historical equivalence.
+
+## Try it yourself
+
+Use Python 3.11 or 3.12 and Git. This first example runs locally without a robot,
+camera or service account.
 
 ```bash
-git clone https://github.com/monurkeskin/emotion-aware-negotiation-2025.git
-cd emotion-aware-negotiation-2025
+git clone https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025.git
+cd An-Adaptive-Emotion-Aware-Strategy-IVA-2025
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python run.py --output demo-output
 ```
 
-On Windows, create the environment with `py -3 -m venv .venv` and activate it
-with `.venv\Scripts\Activate.ps1` in PowerShell. Git is required for the pinned
-engine dependency. [Troubleshooting and compatibility](docs/compatibility.md).
+On Windows, create the environment with `py -3 -m venv .venv` and activate it with
+`.venv\Scripts\Activate.ps1` in PowerShell.
 
-Open `demo-output/report/index.html`. The output includes full-precision JSON/CSV,
-a workbook, figures, immutable source records and a timing receipt. This is a
-**synthetic functional example**; it does not reproduce human participants or an
-emotional, gesture or embodiment benefit. Existing output directories are preserved.
+Open **`demo-output/report/index.html`** to follow the example negotiation. The
+output includes offers, utility trajectories, session records and exportable
+figures. These are synthetic examples for exploring the software and method.
+[Installation help](docs/compatibility.md).
 
-![Protocol overview: configuration, isolated sessions, durable events and analysis.](docs/images/protocol.svg)
-
-## Inspect the method and run the GUI
+### Read a calculation or open the study workspace
 
 ```bash
-negotiator reproduce reproduction/profile-1.json --output method-output
-negotiator cite demo-output/records --format bibtex
+negotiator reproduce reproduction/method.json --output method-output
 negotiator gui
 ```
 
-In **New study → Import a paper or study configuration**, choose
-`configs/synthetic.json` to inspect the hardware-free demonstration, or
-`configs/protocol-solver-first.json` to inspect the published-protocol template and its missing
-requirements. Participant and conductor use separate views. [Step-by-step protocol guide](docs/protocol.md).
+In **New study → Import a paper or study configuration**, select
+`configs/synthetic.json` for the demonstration, or `configs/protocol-solver-first.json`
+to inspect the paper's protocol template. The [study guide](docs/protocol.md)
+explains the remaining protocol/asset requirements and device setup.
 
-## What can currently be reproduced?
+## Data and reproducibility
 
-| Target | Scope |
-| --- | --- |
-| `method.json` | Recompute and check against independent references |
-| `profile-1.json` | Recompute and check against independent references |
-| `profile-2.json` | Recompute and check against independent references |
-| `paired-example.json` | Recompute and check against independent references |
-| `published-results.json` | Unavailable original inputs; no numbers fabricated |
+Participant-level records and audio/video recordings are **not distributed in this
+repository**. Restricted access is compatible with sharing the method, protocol and
+analysis code; it does not require releasing human-study data publicly. The package
+provides synthetic inputs and documents which computations can be run from them.
+Recomputing the published human-study statistics additionally requires authorized
+access to the relevant inputs and the corresponding analysis specification.
 
-Five-minute Hybrid practice, two counterbalanced ten-minute main sessions, ten-minute break and post-session nine-point questionnaires; fruit score tables follow session position.
+[Reproducibility guide](REPRODUCIBILITY.md) · [Paper-to-code map](paper-map.json) ·
+[Analysis guide](docs/analysis.md)
 
-Original human records and some historical settings/assets remain unavailable.
-[REPRODUCIBILITY.md](REPRODUCIBILITY.md) explains every target and its limits;
-[paper-map.json](paper-map.json) records full, partial and unverified requirements
-separately. A passing synthetic test does not establish historical experiment parity.
+## Build on the work
 
-## Cite this work
+To change a paper condition, start with its configuration and add a small test
+showing the intended behavior. Shared negotiation rules belong in NEGOTIATOR;
+paper-specific profiles, protocols and result recipes belong here. The
+[development guide](docs/development.md) walks through these boundaries and the
+test-first workflow. [Contribution guide](CONTRIBUTING.md).
 
-Cite the associated paper when using or studying its method. Also cite the engine
-and record the exact software version used; `negotiator cite` extracts citations
-from executed session records.
+## Cite the paper
+
+If you use this method or study design, please cite the associated paper:
 
 ```bibtex
 @inproceedings{emotionawarenegotiation2025,
@@ -89,8 +114,8 @@ from executed session records.
 }
 ```
 
-[CITATION.cff](CITATION.cff) offers the paper as the preferred citation.
-[CodeMeta](codemeta.json), [source notices](NOTICE) and
-[framework identity](framework.json) support versioned attribution. The software
-is GPL-3.0-only. No paper working tree, participant recording or licensed robot
-asset is bundled.
+The [citation file](CITATION.cff) provides the paper as the preferred citation.
+For software provenance, also record the version and [archived 2.0.0 artifact](https://doi.org/10.5281/zenodo.22729000).
+When using the shared engine in new research, cite the
+[NEGOTIATOR framework paper](https://doi.org/10.24963/ijcai.2024/1012).
+GPL-3.0-only; original contributors and sources are credited in [NOTICE](NOTICE).
