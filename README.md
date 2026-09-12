@@ -5,13 +5,10 @@ Mehmet Onur Keskin · Umut Çakan · Reyhan Aydoğan
 [Paper](https://doi.org/10.1145/3717511.3747087) · [Explore the method](METHOD.md) · [Try the code](#try-it-yourself) · [Study guide](docs/protocol.md) · [Citation](#cite-the-paper)
 
 [![Tests](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/actions/workflows/tests.yml)
-[![Software archive](https://zenodo.org/badge/DOI/10.5281/zenodo.22729000.svg)](https://doi.org/10.5281/zenodo.22729000)
-
-**Can a negotiating agent use emotional feedback to adapt its offers while remaining responsive to how the person actually bargains?**
 
 This paper develops Solver into an adaptive emotion-aware negotiation strategy and evaluates it against a Hybrid baseline in human–robot interactions. Emotional feedback, reciprocal bidding, opponent awareness and time pressure all contribute to the next offer.
 
-## The idea
+## Method
 
 The published method averages categorical facial-expression probabilities over the response interval, estimates how the human responds to changes in agent behavior, and adapts concession parameters using dominant move categories. After adaptation, it compares the proposed offer with an estimated Nash-product offer.
 
@@ -25,26 +22,25 @@ flowchart LR
   E --> G[Offer and estimated Nash comparison]
 ```
 
-## In the paper
+## Study and findings
 
 In the reported 28-participant study, Solver achieved higher agent utility and required fewer bids than the Hybrid baseline. Participants also rated Solver more highly on caring about their preferences. The paper contains the study statistics and their scope; the runnable examples here are synthetic method checks. [Read the paper](https://doi.org/10.1145/3717511.3747087).
 
-## Explore this work
+## What you can explore
 
 Follow the equation through a small input example, inspect the exact fruit point tables and compare Solver-first with Hybrid-first protocol configurations. The paper's categorical formulation is the method implemented by this maintained package.
 
 | Explore | Start with | What it shows |
 | --- | --- | --- |
-| Adaptive method | `reproduction/method.json` | Inspect affect, awareness and target-utility calculations. |
-| Exact point profiles | `reproduction/profile-1.json` | Recompute the published fruit-sharing utility space. |
-| Study order | `CONFIGURATIONS.md` | Compare Solver-first and Hybrid-first session schedules. |
+| Adaptive method | [reproduction/method.json](reproduction/method.json) | Inspect affect, awareness and target-utility calculations. |
+| Exact point profiles | [reproduction/profile-1.json](reproduction/profile-1.json) | Recompute the published fruit-sharing utility space. |
+| Study order | [CONFIGURATIONS.md](CONFIGURATIONS.md) | Compare Solver-first and Hybrid-first session schedules. |
 
-This repository holds the paper-specific configurations, method checks and study
-guides. The shared [NEGOTIATOR framework](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024) runs the negotiation,
+The configurations, method checks and study guides are specific to this paper. The shared [NEGOTIATOR framework](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024) runs the negotiation,
 participant/conductor views and session analysis. Its exact **2.0.0** revision is
 pinned in [framework.json](framework.json); installation brings it in automatically.
 
-The repository linked by the paper also contains a dimensional valence/arousal variant. This package makes the categorical choice explicit, including current-decision adaptation, Silent response adjustment and estimated Nash comparison. Some numerical settings remain maintained choices; see [METHOD.md](METHOD.md) before interpreting historical equivalence.
+The implementation follows the paper’s categorical emotion formulation. Historical branches contain different variants; [METHOD.md](METHOD.md) explains the selected behavior, adaptation order and estimated Nash comparison. The numerical adjustment for a Silent response is a documented maintenance choice, since the paper specifies its direction without a value.
 
 ## Try it yourself
 
@@ -80,14 +76,12 @@ In **New study → Import a paper or study configuration**, select
 to inspect the paper's protocol template. The [study guide](docs/protocol.md)
 explains the remaining protocol/asset requirements and device setup.
 
-## Data and reproducibility
+## Data and analysis
 
-Participant-level records and audio/video recordings are **not distributed in this
-repository**. Restricted access is compatible with sharing the method, protocol and
-analysis code; it does not require releasing human-study data publicly. The package
-provides synthetic inputs and documents which computations can be run from them.
-Recomputing the published human-study statistics additionally requires authorized
-access to the relevant inputs and the corresponding analysis specification.
+Participant records and recordings are not included. The examples use labeled
+synthetic inputs so you can run the code and inspect its calculations. Recomputing
+the human-study results requires authorized access to the original inputs and
+the matching analysis procedure.
 
 [Reproducibility guide](REPRODUCIBILITY.md) · [Paper-to-code map](paper-map.json) ·
 [Analysis guide](docs/analysis.md)
