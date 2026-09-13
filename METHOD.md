@@ -1,5 +1,14 @@
 # Method and evidence
 
+## Published questionnaire
+
+Protocol revision 3 includes the eight Table 5 items on their original 1–9 scale,
+with the Section 4.1 post-session schedule. The [questionnaire guide](docs/questionnaire.md)
+connects the source, both order configurations, missing-response handling and
+the independent protocol/export tests. Optional skipping is a maintenance choice;
+the paper does not specify a forced-response setting. The original platform export
+and participant responses remain unavailable.
+
 Associated paper: [An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments](https://doi.org/10.1145/3717511.3747087).
 
 ## Scientific contract

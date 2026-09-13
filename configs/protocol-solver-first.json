@@ -10,7 +10,104 @@
   "seed": 42,
   "synthetic": false,
   "instructions": "Study the displayed preferences and negotiate a complete offer before the deadline. Allocation quantities are what you keep.",
-  "surveys": [],
+  "surveys": [
+    {
+      "id": "iva2025-q1",
+      "prompt": "Nao negotiated fairly.",
+      "minimum": 1,
+      "maximum": 9,
+      "minimum_label": "Strongly disagree",
+      "maximum_label": "Strongly agree",
+      "phase": "post_session",
+      "required": false,
+      "include_practice": false,
+      "source": "https://doi.org/10.1145/3717511.3747087; Table 5; Section 4.1"
+    },
+    {
+      "id": "iva2025-q2",
+      "prompt": "Nao negotiated with me like a human.",
+      "minimum": 1,
+      "maximum": 9,
+      "minimum_label": "Strongly disagree",
+      "maximum_label": "Strongly agree",
+      "phase": "post_session",
+      "required": false,
+      "include_practice": false,
+      "source": "https://doi.org/10.1145/3717511.3747087; Table 5; Section 4.1"
+    },
+    {
+      "id": "iva2025-q3",
+      "prompt": "Nao determined her next offer according to my emotional state.",
+      "minimum": 1,
+      "maximum": 9,
+      "minimum_label": "Strongly disagree",
+      "maximum_label": "Strongly agree",
+      "phase": "post_session",
+      "required": false,
+      "include_practice": false,
+      "source": "https://doi.org/10.1145/3717511.3747087; Table 5; Section 4.1"
+    },
+    {
+      "id": "iva2025-q4",
+      "prompt": "Nao tried to find the best deal for us.",
+      "minimum": 1,
+      "maximum": 9,
+      "minimum_label": "Strongly disagree",
+      "maximum_label": "Strongly agree",
+      "phase": "post_session",
+      "required": false,
+      "include_practice": false,
+      "source": "https://doi.org/10.1145/3717511.3747087; Table 5; Section 4.1"
+    },
+    {
+      "id": "iva2025-q5",
+      "prompt": "Nao cared about my preferences.",
+      "minimum": 1,
+      "maximum": 9,
+      "minimum_label": "Strongly disagree",
+      "maximum_label": "Strongly agree",
+      "phase": "post_session",
+      "required": false,
+      "include_practice": false,
+      "source": "https://doi.org/10.1145/3717511.3747087; Table 5; Section 4.1"
+    },
+    {
+      "id": "iva2025-q6",
+      "prompt": "Nao considers my behavior.",
+      "minimum": 1,
+      "maximum": 9,
+      "minimum_label": "Strongly disagree",
+      "maximum_label": "Strongly agree",
+      "phase": "post_session",
+      "required": false,
+      "include_practice": false,
+      "source": "https://doi.org/10.1145/3717511.3747087; Table 5; Section 4.1"
+    },
+    {
+      "id": "iva2025-q7",
+      "prompt": "I'm satisfied with my performance.",
+      "minimum": 1,
+      "maximum": 9,
+      "minimum_label": "Strongly disagree",
+      "maximum_label": "Strongly agree",
+      "phase": "post_session",
+      "required": false,
+      "include_practice": false,
+      "source": "https://doi.org/10.1145/3717511.3747087; Table 5; Section 4.1"
+    },
+    {
+      "id": "iva2025-q8",
+      "prompt": "Nao often made very unfair offers.",
+      "minimum": 1,
+      "maximum": 9,
+      "minimum_label": "Strongly disagree",
+      "maximum_label": "Strongly agree",
+      "phase": "post_session",
+      "required": false,
+      "include_practice": false,
+      "source": "https://doi.org/10.1145/3717511.3747087; Table 5; Section 4.1"
+    }
+  ],
   "conditions": [
     {
       "label": "Practice (synthetic three-issue task)",
@@ -978,18 +1075,25 @@
   ],
   "protocol": {
     "id": "emotion-aware-negotiation-2025",
-    "revision": "2",
+    "revision": "3",
     "paper": "https://doi.org/10.1145/3717511.3747087",
     "requirements": [
       {
         "id": "evidence-1",
-        "description": "Historical numeric adaptation threshold, step sizes, zero-denominator and class-change conventions"
+        "description": "Historical numeric adaptation threshold, step sizes, zero-denominator and class-change conventions",
+        "required_for": "historical-analysis"
       },
       {
         "id": "evidence-2",
-        "description": "Original practice profiles, questionnaires, camera model and frame timestamps"
+        "description": "Validated practice profiles, camera model and preprocessing configuration for the selected protocol",
+        "required_for": "execution"
+      },
+      {
+        "id": "evidence-2-records",
+        "description": "Original participant frame timestamps and observation records",
+        "required_for": "historical-analysis"
       }
     ],
-    "configuration_sha256": "7363ec07f49bd751009f1fdcdac1e3a76258744fd02de5ee99a26f9e1f6631a7"
+    "configuration_sha256": "e9ea62b04ebe1c658b221b3c2a7622bfa37a700ffad7648d1b5f0a6c51b8e692"
   }
 }

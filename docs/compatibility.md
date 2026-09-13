@@ -1,6 +1,6 @@
 # Installation and compatibility
 
-Use Python 3.11 or 3.12 and Git. `requirements.txt` pins engine 2.0.0 by exact commit;
+Use Python 3.11 or 3.12 and Git. `requirements.txt` pins engine 2.1.0 by exact commit;
 `constraints.txt` freezes its resolved runtime dependencies. Keep this environment
 separate from older robot SDK environments. A source clone plus its installed
 requirements runs independently; no other checkout needs to be adjacent.
@@ -16,7 +16,7 @@ requirements runs independently; no other checkout needs to be adjacent.
 The browser avatar is an illustrative interface. It is not a validated replacement
 for a paper's embodiment condition. A newer robot or avatar must pass the engine's
 capability/version/failure contracts and a separate recorded hardware test.
-See the engine's [device guide](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024/blob/v2.0.0/docs/devices.md)
+See the engine's [device guide](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024/blob/v2.1.0/docs/devices.md)
 for exact bridge configuration and the supported legacy namespace.
 
 If installation reports `git` missing, install Git before retrying. If an output

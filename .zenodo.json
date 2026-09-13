@@ -1,6 +1,6 @@
 {
   "title": "An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments — maintained code companion",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "upload_type": "software",
   "description": "Maintained research software for An Adaptive Emotion-Aware Strategy for Human-Agent Negotiation: Insights from Real-World Human-Robot Experiments. Reproducibility scope and source provenance are documented in the repository.",
   "creators": [
@@ -15,6 +15,5 @@
       "relation": "isSupplementTo",
       "scheme": "doi"
     }
-  ],
-  "doi": "10.5281/zenodo.22729000"
+  ]
 }

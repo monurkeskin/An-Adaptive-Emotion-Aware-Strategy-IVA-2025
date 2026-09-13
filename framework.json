@@ -1,11 +1,11 @@
 {
   "repository": "https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024",
-  "version": "2.0.0",
-  "revision": "bf0f0e467293e2ff13adeaff5070a7675f2279a9",
+  "version": "2.1.0",
+  "revision": "2d75a78f3660cd78e3b0318cd8ee17962f838c53",
   "paper": "https://doi.org/10.1145/3717511.3747087",
   "implementation": "maintained",
   "historical_experiment_reproduction": false,
   "release_status": "released",
-  "package_content_sha256": "4ce0f1bdbafcd1330e815f81be5a3c85a79638646ba318d06c98d35adade4c0e",
-  "software_doi": "10.5281/zenodo.22728983"
+  "package_content_sha256": "b8caa53cb445601c08be26373af3c9a1ab8f1733a06fadc0e73fe1a278af696b",
+  "software_release": "https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024/releases/tag/v2.1.0"
 }

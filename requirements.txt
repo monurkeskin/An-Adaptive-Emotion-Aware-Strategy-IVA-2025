@@ -1,2 +1,2 @@
 -c constraints.txt
-negotiator-human @ git+https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024.git@bf0f0e467293e2ff13adeaff5070a7675f2279a9
+negotiator-human @ git+https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024.git@2d75a78f3660cd78e3b0318cd8ee17962f838c53

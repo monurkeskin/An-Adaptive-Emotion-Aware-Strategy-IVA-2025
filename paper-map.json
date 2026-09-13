@@ -404,6 +404,10 @@
         {
           "repository": "companion",
           "path": "tests/test_paper_profiles.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_requirement_scope.py"
         }
       ],
       "result_target": "reproduction/profile-1.json",
@@ -448,6 +452,10 @@
         {
           "repository": "framework",
           "path": "tests/test_study_protocols.py"
+        },
+        {
+          "repository": "companion",
+          "path": "tests/test_requirement_scope.py"
         }
       ],
       "result_target": "configs/synthetic.json",
@@ -730,6 +738,41 @@
       "result_target": "reproduction/targets.json",
       "explanation": "Executable example commands, method map, protocol limits and preferred paper citation are provided.",
       "documentation": "METHOD.md"
+    },
+    {
+      "id": "published-questionnaire",
+      "axis": "protocol",
+      "requirement": "Table 5 item wording, 1–9 anchors and Section 4.1 post-session timing",
+      "status": "full",
+      "critical": true,
+      "sources": [
+        {
+          "entry": "Main.tex",
+          "file": "Main.tex",
+          "sha256": "a91dfce73974439610b6c7ee0c5a8f2caa615ad3a66096339540286d56a0d2af",
+          "label": "tbl-questions",
+          "line": 550,
+          "nearby_graphics": []
+        }
+      ],
+      "implementation": [
+        "instruments/iva-2025-post-session.json",
+        "configs/protocol-solver-first.json",
+        "configs/protocol-hybrid-first.json"
+      ],
+      "tests": [
+        {
+          "repository": "companion",
+          "path": "tests/test_paper_questionnaire.py"
+        },
+        {
+          "repository": "framework",
+          "path": "tests/test_questionnaire_contracts.py"
+        }
+      ],
+      "result_target": "instruments/iva-2025-post-session.json",
+      "explanation": "The eight published items are scheduled after both main conditions. Scale meanings and missingness survive replay/export. Optional skipping is a documented maintenance choice; original participant responses and other forms are outside this claim.",
+      "documentation": "docs/questionnaire.md"
     }
   ],
   "interpretation": {

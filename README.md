@@ -73,9 +73,10 @@ Follow the equation through a small input example, inspect the exact fruit point
 | Adaptive method | [reproduction/method.json](reproduction/method.json) | Inspect affect, awareness and target-utility calculations. |
 | Exact point profiles | [reproduction/profile-1.json](reproduction/profile-1.json) | Recompute the published fruit-sharing utility space. |
 | Study order | [CONFIGURATIONS.md](CONFIGURATIONS.md) | Compare Solver-first and Hybrid-first session schedules. |
+| Participant questionnaire | [Eight published questions](docs/questionnaire.md) | Read the paper's wording, 1–9 scale and timing after each main session. |
 
 The configurations, method checks and study guides are specific to this paper. The shared [NEGOTIATOR framework](https://github.com/monurkeskin/NEGOTIATOR-IJCAI-2024) runs the negotiation,
-participant/conductor views and session analysis. Its exact **2.0.0** revision is
+participant/conductor views and session analysis. Its exact **2.1.0** revision is
 pinned in [framework.json](framework.json); installation brings it in automatically.
 
 The implementation follows the paper’s categorical emotion formulation. Historical branches contain different variants; [METHOD.md](METHOD.md) explains the selected behavior, adaptation order and estimated Nash comparison. The numerical adjustment for a Silent response is a documented maintenance choice, since the paper specifies its direction without a value.
@@ -147,7 +148,7 @@ If you use this method or study design, please cite the associated paper:
 ```
 
 The [citation file](CITATION.cff) provides the paper as the preferred citation.
-For software provenance, also record the version and [archived 2.0.0 artifact](https://doi.org/10.5281/zenodo.22729000).
+For software provenance, record the [2.1.0 release](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/releases/tag/v2.1.0) and commit used. The earlier [archived 2.0.0 artifact](https://doi.org/10.5281/zenodo.22729000) remains available.
 When using the shared engine in new research, cite the
 [NEGOTIATOR framework paper](https://doi.org/10.24963/ijcai.2024/1012).
 GPL-3.0-only; original contributors and sources are credited in [NOTICE](NOTICE).

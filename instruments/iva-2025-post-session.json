@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "iva-2025-post-session-v1",
+  "title": "IVA 2025 negotiation questionnaire",
+  "paper": "https://doi.org/10.1145/3717511.3747087",
+  "wording_source": "Table 5 (tbl-questions)",
+  "timing_source": "Section 4.1: after each main negotiation, before the between-session break",
+  "minimum": 1,
+  "maximum": 9,
+  "minimum_label": "Strongly disagree",
+  "maximum_label": "Strongly agree",
+  "phase": "post_session",
+  "include_practice": false,
+  "required": false,
+  "missing_response_policy": "This implementation permits skipping; the paper does not specify a forced-response setting. Preserve null and its missingness reason.",
+  "scoring": "Retain each item separately on the reported scale. Q8 is negatively worded; no automatic reversal or composite score is specified by the paper.",
+  "items": [
+    {"id": "iva2025-q1", "prompt": "Nao negotiated fairly."},
+    {"id": "iva2025-q2", "prompt": "Nao negotiated with me like a human."},
+    {"id": "iva2025-q3", "prompt": "Nao determined her next offer according to my emotional state."},
+    {"id": "iva2025-q4", "prompt": "Nao tried to find the best deal for us."},
+    {"id": "iva2025-q5", "prompt": "Nao cared about my preferences."},
+    {"id": "iva2025-q6", "prompt": "Nao considers my behavior."},
+    {"id": "iva2025-q7", "prompt": "I'm satisfied with my performance."},
+    {"id": "iva2025-q8", "prompt": "Nao often made very unfair offers."}
+  ]
+}

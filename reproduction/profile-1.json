@@ -6,7 +6,7 @@
   "analysis": "profile-space",
   "parameters": {},
   "environment": {
-    "framework": "2.0.0"
+    "framework": "2.1.0"
   },
   "inputs": [
     {
