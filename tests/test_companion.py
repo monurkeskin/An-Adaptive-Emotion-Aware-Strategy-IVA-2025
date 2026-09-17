@@ -33,3 +33,10 @@ def test_complete_independent_example_and_report(tmp_path):
     assert data["independent_unit"] == "participant"
     assert result.with_name("records.xlsx").is_file()
     assert len(data["study_sources"]) == 1
+
+
+def test_verify_reproduction_pipeline(tmp_path):
+    from verify import verify
+
+    receipt = verify(tmp_path / "verification")
+    assert receipt is not None
