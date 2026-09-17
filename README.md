@@ -5,6 +5,7 @@ Mehmet Onur Keskin · Umut Çakan · Reyhan Aydoğan
 [Paper](https://doi.org/10.1145/3717511.3747087) · [Explore the method](METHOD.md) · [Try the code](#try-it-yourself) · [Study guide](docs/protocol.md) · [Citation](#cite-the-paper)
 
 [![Tests](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/actions/workflows/tests.yml/badge.svg)](https://github.com/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025/branch/main/graph/badge.svg)](https://codecov.io/gh/monurkeskin/An-Adaptive-Emotion-Aware-Strategy-IVA-2025)
 
 An offer can look acceptable on paper while leaving its recipient visibly
 frustrated. **Can a negotiating agent use that feedback to choose its next offer?**
