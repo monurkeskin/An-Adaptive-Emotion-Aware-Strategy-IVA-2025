@@ -42,7 +42,7 @@ openpyxl==3.1.5
     # via negotiator-human
 packaging==26.3
     # via matplotlib
-pillow==12.3.0
+pillow==13.0.0
     # via matplotlib
 pydantic==2.13.5
     # via fastapi
